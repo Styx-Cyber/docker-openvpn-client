@@ -49,6 +49,7 @@ if [[ $AUTH_SECRET ]] && [ ! -f "$AUTH_SECRET" ]; then
 fi
 
 if [[ $AUTH_SECRET ]]; then
+    openvpn_args+=("--script-security" "2")
     openvpn_args+=("--auth-user-pass" "$AUTH_SECRET")
 fi
 
