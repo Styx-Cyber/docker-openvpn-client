@@ -42,7 +42,7 @@ fi
 if [[ $AUTH_SECRET ]]; then
     openvpn_args+=("--auth-user-pass" "/run/secrets/$AUTH_SECRET")
 fi
-
+openvpn_args+=("--mute-replay-warnings")
 openvpn "${openvpn_args[@]}" &
 openvpn_pid=$!
 
