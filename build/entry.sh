@@ -29,7 +29,6 @@ echo "using openvpn configuration file: $config_file"
 
 
 openvpn_args=(
-    "--mute-replay-warnings"
     "--config" "$config_file"
     "--cd" "/config"
 )
